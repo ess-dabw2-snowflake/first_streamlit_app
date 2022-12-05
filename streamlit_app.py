@@ -29,7 +29,7 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 # Display the table on the page.
 streamlit.dataframe(fruits_to_show)
 
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "watermelon")
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
 streamlit.text(fruityvice_response)
 
 # New section to display fruityvice api response
@@ -43,6 +43,8 @@ streamlit.dataframe(fruityvice_normalized)
 
 # lets comment out line37 and modify line 32
 
+fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
+streamlit.write('The user entered ', fruit_choice)
 
 
 
